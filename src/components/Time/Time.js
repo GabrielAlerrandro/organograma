@@ -1,11 +1,14 @@
-import "./Time.css"
+import Colaborador from "../Colaborador/Colaborador";
+import "./Time.css";
 
-const Time = (props) => {
+const Time = ({ nome, corPrimaria, corSecundaria }) => {
+  const estilo = { backgroundColor: corSecundaria };
   return (
-    <section className="time">
-        <h3>{props.nome}</h3>
+    <section className="time" style={estilo}>
+      <h3 style={{ borderColor: corPrimaria }}>{nome}</h3>
+      <Colaborador />
     </section>
-  )
-}
+  );
+};
 
-export default Time
+export default Time;
